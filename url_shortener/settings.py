@@ -20,24 +20,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-tn1ow-7z(qe!0yl77*74ujl*s67u#+l_ta3)z)!_*$x_my%x%&'
+SECRET_KEY = 'django-insecure-ums1g%wq#29u=jms=m^ht-u^&1@72j%s3n+687#$^b60z#!_+q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ "127.0.0.1", "12url.me" ]
+ALLOWED_HOSTS = [ "12url.me", "127.0.0.1" ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-  #'django.contrib.admin',
+  'django.contrib.admin',
   'django.contrib.auth',
   'django.contrib.contenttypes',
   'django.contrib.sessions',
   'django.contrib.messages',
   'django.contrib.staticfiles',
-  'api.apps.ApiConfig'
+  'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'url_shortener.urls'
 TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [ "templates" ],
+    'DIRS': [ 'templates' ],
     'APP_DIRS': True,
     'OPTIONS': {
       'context_processors': [
@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-  os.path.join( BASE_DIR, "resource" )
+  os.path.join( BASE_DIR, "resources" ),
 ]
 
 # Default primary key field type

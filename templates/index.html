@@ -29,10 +29,11 @@
         <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Create a short url?</div>
         <p class="block mt-1 text-lg leading-tight font-medium text-black">Just put your link here</p>
         <!-- <p class="mt-2 text-gray-500">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p> -->
-        <form class="w-full max-w-sm">
+        <form class="w-full max-w-sm" method="POST" action="new/">
           <div class="flex items-center border-b border-teal-500 py-2">
-            <input class="w-full appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="https://12url.me/about?token=c2ea10262a51b257d7f96b9c9c5e8028">
-            <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            {% csrf_token %}
+            <input name="url" class="w-full appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="https://12url.me/about?token=c2ea10262a51b257d7f96b9c9c5e8028">
+            <button type="submit" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
               Convert
             </button>
           </div>
@@ -40,6 +41,5 @@
       </div>
     </div>
   </div>
-
 </body>
 </html>
