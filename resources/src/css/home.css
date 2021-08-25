@@ -1,0 +1,5 @@
+#history{
+  max-height: 250px;
+  overflow:auto;
+  padding-bottom: 20px;
+}
