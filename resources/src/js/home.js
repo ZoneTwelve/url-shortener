@@ -54,7 +54,7 @@ const apply_view = ( urls ) => {
     let main  = createElement("div", {className:"md:flex"}),
         view  = createElement("div", {className:"w-full px-4 py-2"}),
         space = createElement("div", {className:"space-x-4"}),
-        urlel = createElement("button", {innerText:u.url, onclick: ( self ) => copy_text(self.target), className:"short_url inline-block btn rounded-md bg-gray-200 text-gray-700 border border-gray-200 px-2 py-2 w-9/12"}),
+        urlel = createElement("a", {href:u.url, innerText:u.url, onclick: ( self ) => copy_text(self.target), className:"short_url inline-block btn rounded-md bg-gray-200 text-gray-700 border border-gray-200 px-2 py-2 w-9/12"}),
         show  = createElement("button", {innerText:"Show", onclick: () => alert("準備中owo"), className:"inline-block btn rounded-md bg-gray-200 text-gray-700 border border-gray-200 px-4 py-2 text-center"});
 
     space.appendChild( urlel );

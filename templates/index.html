@@ -45,7 +45,7 @@
   <div class="mt-8 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
     <div class="md:flex">
       <div class="w-full p-8">
-        <p class="text-3xl">History</p>
+        <span class="text-3xl">History</span> <span onclick="if(confirm('You sure wanna delete?')){localStorage.setItem('urls', '[]');apply_information();}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Clear</span>
       </div>
     </div>
 

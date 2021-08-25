@@ -22,6 +22,5 @@ urlpatterns = [
   path('admin/', admin.site.urls),
   path('', views.home),
   path('s/<str:rhash>', views.redirect_short),
-  #path('s/<str:rhash>', views.redirect_short),
   path('new/', views.create_url),
 ]
